@@ -1,0 +1,452 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* Header */
+
+header {
+  height: 72px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e8ee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.logo span {
+  margin-left: 6px;
+}
+
+.badge {
+  background: #fff3cf;
+  color: #8b5d00;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Hero */
+
+.hero {
+  background: #10151f;
+  color: white;
+  padding: 58px 6%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #ffc933;
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.05;
+  margin: 12px 0;
+}
+
+.hero h1 span {
+  color: #ffc933;
+}
+
+.sub {
+  color: #b9c0cc;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Location Card */
+
+.hero-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 28px;
+  display: flex;
+  gap: 18px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.pin {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin-top: 12px;
+  font-size: 12px;
+  color: white;
+  background: #111111;
+}
+
+.pin.end {
+  background: #f2ad00;
+}
+
+.route-line {
+  width: 2px;
+  background: #dce0e7;
+  position: absolute;
+  left: 34px;
+  top: 44px;
+  height: 60px;
+}
+
+.locations {
+  flex: 1;
+  display: grid;
+  gap: 18px;
+}
+
+.locations input {
+  border: 1px solid #e2e5eb;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+.locations input:focus {
+  border-color: #f0b400;
+}
+
+/* Main Content */
+
+.content {
+  max-width: 1180px;
+  margin: auto;
+  padding: 42px 6%;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+}
+
+h2 {
+  font-size: 22px;
+  margin: 0 0 16px;
+}
+
+/* Ride Cards */
+
+.ride-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ride {
+  width: 100%;
+  border: 2px solid #e7eaf0;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  gap: 15px;
+  transition: 0.2s;
+}
+
+.ride:hover {
+  border-color: #ffc72c;
+}
+
+.ride.active {
+  border-color: #ffc72c;
+  background: #fffaf0;
+}
+
+.car-icon {
+  font-size: 30px;
+}
+
+.ride-text {
+  display: grid;
+  gap: 4px;
+  flex: 1;
+}
+
+.ride-text small,
+.eta {
+  color: #737b89;
+  font-size: 12px;
+}
+
+.eta {
+  font-weight: 700;
+}
+
+/* Distance */
+
+.distance {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  margin: 22px 0;
+}
+
+.distance label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.distance-control {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.distance-control input {
+  flex: 1;
+  accent-color: #f2b400;
+}
+
+/* Summary */
+
+.summary {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid #eef0f4;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.summary span {
+  color: #737b89;
+}
+
+.summary b {
+  font-size: 14px;
+  text-align: right;
+}
+
+.summary .total {
+  border: 0;
+  padding-top: 16px;
+}
+
+.summary strong {
+  font-size: 24px;
+  color: #bd8500;
+}
+
+/* Book Button */
+
+.book-button {
+  width: 100%;
+  margin-top: 14px;
+  border: 0;
+  border-radius: 14px;
+  background: #ffc72c;
+  color: #171717;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.book-button:hover {
+  background: #eeb400;
+}
+
+/* Map */
+
+.map {
+  height: 310px;
+  border-radius: 22px;
+  background: #e7ebdf;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #dce1d4;
+}
+
+.map-road {
+  position: absolute;
+  height: 18px;
+  background: #ffffff;
+  border: 4px solid #d9ddd3;
+  transform: rotate(22deg);
+  width: 130%;
+  left: -15%;
+}
+
+.road-1 {
+  top: 80px;
+}
+
+.road-2 {
+  top: 170px;
+  transform: rotate(-35deg);
+}
+
+.road-3 {
+  top: 245px;
+  transform: rotate(8deg);
+}
+
+.map-pin {
+  position: absolute;
+  background: #161b24;
+  color: #ffffff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  padding-top: 7px;
+  font-weight: 800;
+  z-index: 2;
+}
+
+.pickup-pin {
+  top: 60px;
+  left: 25%;
+}
+
+.destination-pin {
+  bottom: 45px;
+  right: 22%;
+  background: #e4a900;
+}
+
+.map-car {
+  position: absolute;
+  top: 145px;
+  left: 49%;
+  font-size: 30px;
+}
+
+.map-text {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+/* Success */
+
+.success {
+  margin-top: 16px;
+  background: #eaf9ef;
+  border: 1px solid #bde5c8;
+  color: #216b38;
+  border-radius: 14px;
+  padding: 14px;
+  display: grid;
+  gap: 4px;
+}
+
+.success span {
+  font-size: 13px;
+}
+
+/* History */
+
+.history {
+  margin-top: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.history h3 {
+  margin: 0 0 12px;
+}
+
+.history > p {
+  color: #777777;
+  font-size: 13px;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.history-item div {
+  flex: 1;
+  display: grid;
+  gap: 3px;
+}
+
+.history-item small {
+  color: #777777;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 180px;
+}
+
+.history-item strong {
+  font-size: 14px;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  color: #8a919d;
+  font-size: 12px;
+  padding: 25px;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 38px 5%;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    padding: 30px 5%;
+  }
+
+  .map {
+    height: 240px;
+  }
+
+  header {
+    padding: 0 5%;
+  }
+}
